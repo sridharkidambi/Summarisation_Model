@@ -1,0 +1,20 @@
+[project]
+name = "summarization-model"
+version = "0.1.0"
+description = "Extractive, abstractive and hybrid summarization over a financial text, with pretrained models and ROUGE evaluation."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "transformers>=4.46.0",
+    "torch>=2.4.0",
+    "sentence-transformers>=3.2.0",
+    "networkx>=3.3",
+    "rouge-score>=0.1.2",
+]
+
+[project.scripts]
+summarization-model = "summarization_model.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
